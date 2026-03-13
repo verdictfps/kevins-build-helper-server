@@ -1,0 +1,980 @@
+﻿
+@keyframes change-color {
+  0% {
+    color: #FDB142;
+  }
+  25% {
+    color: #00A4BD;
+  }
+  50% {
+    color: #FF7A59;
+  }
+  75% {
+    color: #00BDA5;
+  }
+  100% {
+    color: #FDB142;
+  }
+}
+
+@keyframes breatheBox {
+  from {box-shadow: inset 2px 2px 5px 0px #000000, inset 0px 0px 0px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
+  to {box-shadow: inset 2px 2px 5px 0px #000000, inset 0px 0px 10px 0px #FDB142, inset 0px 0px 80px 70px #2D424B;}
+}
+
+@keyframes hoverGun {
+     100% {transform: translate(0px, -5px) scale(150%);}
+}
+
+@keyframes breatheGun {
+    /*from {transform: translate(0px, 0px) scale(70%); -webkit-filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270) drop-shadow(0px 10px 10px #000000); filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270) drop-shadow(0px 10px 10px #000000);}
+    to {transform: translate(0px, -5px) scale(71%); -webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6) drop-shadow(0px 50px 20px #000000be); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6) drop-shadow(0px 50px 20px #000000be);}*/
+    from {transform: translate(0px, 0px) scale(70%); -webkit-filter: drop-shadow(0px 0px 10px #fdb24270) drop-shadow(0px 10px 10px #000000); filter: drop-shadow(0px 0px 10px #fdb24270) drop-shadow(0px 10px 10px #000000);}
+    to {transform: translate(0px, -5px) scale(71%); -webkit-filter: drop-shadow(0px 0px 20px #FDB142) drop-shadow(0px 50px 20px #000000be); filter: drop-shadow(0px 0px 20px #FDB142) drop-shadow(0px 50px 20px #000000be);}
+
+}
+
+@keyframes gunShadow {
+    /*from {transform: translate(0px, 0px) scale(70%);; -webkit-filter: drop-shadow(0px 10px 10px #000000); filter: drop-shadow(0px 10px 10px #000000);}*/
+    /*100% {transform: translate(0px, -5px) scale(75%);; -webkit-filter: drop-shadow(0px 50px 20px #000000be); filter: drop-shadow(0px 50px 20px #000000be);}*/
+    0% {transform: translate(0px, 0px) scale(70%); -webkit-filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270) drop-shadow(0px 10px 10px #000000); filter: drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 1px #fdb2425b) drop-shadow(0px 0px 10px #fdb24270) drop-shadow(0px 10px 10px #000000);}
+    100% {transform: translate(0px, -5px) scale(72%); -webkit-filter: drop-shadow(0px 1px #FDB142) drop-shadow(0px -1px #FDB142) drop-shadow(1px 0px #FDB142) drop-shadow(-1px 0px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6) drop-shadow(0px 50px 20px #000000be); filter: drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px 1px #FDB142) drop-shadow(-1px -1px #FDB142) drop-shadow(1px -1px #FDB142) drop-shadow(-1px 1px #FDB142) drop-shadow(0px 0px 20px #fdb242a6) drop-shadow(0px 50px 20px #000000be);}
+
+}
+
+@keyframes insideShadow {
+    /*from {-webkit-filter: drop-shadow(0px 0px 0px #000000be); filter: drop-shadow(0px 0px 0px #000000be);;}
+    to {-webkit-filter: drop-shadow(0px 0px 20px #000000be); filter: drop-shadow(0px 0px 20px #000000be);;}*/
+      from {box-shadow: inset 0px 0px 15px 0px #000000; z-index: 15;}
+  to {box-shadow: inset 0px 0px 80px 5px #000000; z-index: 15;}
+
+}
+
+@keyframes insideShadowHover {
+    /*from {-webkit-filter: drop-shadow(0px 0px 0px #000000be); filter: drop-shadow(0px 0px 0px #000000be);;}
+    to {-webkit-filter: drop-shadow(0px 0px 20px #000000be); filter: drop-shadow(0px 0px 20px #000000be);;}*/
+    from {box-shadow: inset 0px 0px 15px 0px #000000; z-index: 15;}
+    to {box-shadow: inset 0px 0px 80 5px #000000; z-index: 15;}
+
+}
+
+@keyframes titleGlow {
+    from {text-shadow: 0px 0px 7px #FDB142;}
+    to {text-shadow: 0px 0px 11px #FDB142;}
+}
+
+@keyframes toolGlow {
+    from {text-shadow: 0px 0px 6px white;}
+    to {text-shadow: 0px 0px 8px white;}
+}
+
+@keyframes boxSpinX {
+    0% {transform: rotatex(0deg);}
+    25% {transform: rotatex(360deg); background-color: black; box-shadow: inset 0px 0px 10px 25px #FDB142;}
+    50% {transform: rotatex(720deg);}
+    100% {transform: rotatex(1080deg);}
+}
+
+@keyframes boxSpinY {
+    0% {transform: rotatey(0deg); background-image: none; color: white}
+    25% {transform: rotatey(360deg); background-image: none; color: white}
+    50% {transform: rotatey(720deg); background-image: none; color: white}
+    100% {transform: rotatey(1080deg); color: white}
+}
+
+@keyframes boxIdle {
+    0% {transform: rotatex(0deg);}
+    100% {transform: rotatex(0deg);}
+}
+
+.compLabel {
+    color: #89a0b8
+}
+
+.cardStat {
+    font-family: "Fredoka", sans-serif;
+}
+
+@keyframes fucktest {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+@keyframes boxText {
+    0% {opacity: 0%;}
+    75% {opacity: 90%;}
+    100% {opacity: 100%;}
+}
+body {
+    .fredoka-standard {
+        font-family: "Fredoka", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+    }
+
+
+#infoboxText {
+    position: absolute;
+    font-family: "Doto", sans-serif;
+    color: #ffffff;
+    text-align: left;
+    margin: 0px;
+    margin-left: 10px;
+    max-height: 100%;
+    line-height: 15px;
+
+    animation: toolGlow;
+    animation-duration: 0.01s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+}
+
+
+.spinanimation {
+    animation: boxSpinX 0.5s ease-out 1;
+}
+
+.otherspinanimation {
+    animation: boxSpinY 0.5s ease-out 1;
+}
+.otherspinanimation span {
+    animation: boxText 0.5s ease-out 1;
+}
+
+    h1 {
+        font-size: 2em;
+        font-family: "Doto", sans-serif;
+        font-weight: 300;
+        color: #FDB142;
+        padding: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        animation: titleGlow;
+        animation-duration: 0.01s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease;
+    }
+
+    h2 {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 300;
+        color: #FDB142;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        
+    }
+
+    i {
+        width: 100%;
+        height: 100%;
+    }
+
+    h3 {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 300;
+        color: #FDB142;
+    }
+
+    p {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+    }
+
+    select {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 400;
+    }
+
+    label {
+        font-family: "Fredoka", sans-serif;
+        font-size:1em;
+        display: flex;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .commitgrid {
+        background-color: #FDB142;
+        margin-bottom: 5px;
+        border:2px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .commitsubdiv {
+        display:flex;
+        width: 80%;
+        margin: 0%;
+        border: 0px;
+        align-items: center;
+        justify-content: center;
+        padding: 0px;
+        margin-right: 10px
+    }
+
+    .oils {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 400;
+        font-size: 0.5em;
+    }
+
+    div.containerweapon {
+        background-color: #FDB142;
+        border: 1px solid #FDB142;
+    }
+
+    button {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        font-size: 2em;
+        background-color: #FDB142;
+        border: 1px solid #FDB142;
+        width: 100%;
+        height: 100%;
+        color: black;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 5px;
+    }
+
+        button:hover {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #FDB142;
+            border: 3px solid rgb(253, 255, 149);
+            width: 100%;
+            box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+            color: rgb(253, 255, 149);
+            border-radius: 5px;
+            text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+        }
+
+        button:active {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #e4a039;
+            border: 0px;
+            width: 100%;
+            box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+            text-shadow: 2px 2px 0px black;
+            color: transparent;
+            transform: translate(3px, 3px);
+        }
+
+    #buttonRandomEnch {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        font-size: 2em;
+        background-color: #FDB142;
+        border: 2px solid black;
+        width: 100%;
+        height: 100%;
+        color: black;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 5px;
+    }
+
+        #buttonRandomEnch:hover {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #FDB142;
+            border: 3px solid rgb(253, 255, 149);
+            width: 100%;
+            box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+            color: rgb(253, 255, 149);
+            border-radius: 5px;
+            text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+        }
+
+        #buttonRandomEnch:active {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #e4a039;
+            border: 0px;
+            width: 100%;
+            box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+            text-shadow: 2px 2px 0px black;
+            color: transparent;
+            transform: translate(3px, 3px);
+        }
+    
+    #buttonCommitEnchAll {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        font-size: 2em;
+        background-color: #FDB142;
+        border: 2px solid black;
+        width: 100%;
+        height: 100%;
+        color: black;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 5px;
+    }
+
+        #buttonCommitEnchAll:hover {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #FDB142;
+            border: 3px solid rgb(253, 255, 149);
+            width: 100%;
+            box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+            color: rgb(253, 255, 149);
+            border-radius: 5px;
+            text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+        }
+
+        #buttonCommitEnchAll:active {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #e4a039;
+            border: 0px;
+            width: 100%;
+            box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+            text-shadow: 2px 2px 0px black;
+            color: transparent;
+            transform: translate(3px, 3px);
+        }
+
+    #buttonCommitAttAll {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        font-size: 2em;
+        background-color: #FDB142;
+        border: 2px solid black;
+        width: 100%;
+        height: 100%;
+        color: black;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 5px;
+    }
+
+        #buttonCommitAttAll:hover {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #FDB142;
+            border: 3px solid rgb(253, 255, 149);
+            width: 100%;
+            box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+            color: rgb(253, 255, 149);
+            border-radius: 5px;
+            text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+        }
+
+        #buttonCommitAttAll:active {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #e4a039;
+            border: 0px;
+            width: 100%;
+            box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+            text-shadow: 2px 2px 0px black;
+            color: transparent;
+            transform: translate(3px, 3px);
+        }
+    
+    #buttonRandomAtt {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        font-size: 2em;
+        background-color: #FDB142;
+        border: 2px solid black;
+        width: 100%;
+        height: 100%;
+        color: black;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 5px;
+    }
+
+        #buttonRandomAtt:hover {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #FDB142;
+            border: 3px solid rgb(253, 255, 149);
+            width: 100%;
+            box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+            color: rgb(253, 255, 149);
+            border-radius: 5px;
+            text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+        }
+
+        #buttonRandomAtt:active {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #e4a039;
+            border: 0px;
+            width: 100%;
+            box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+            text-shadow: 2px 2px 0px black;
+            color: transparent;
+            transform: translate(3px, 3px);
+        }
+
+    #buttonResetEnch {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        font-size: 2em;
+        background-color: #FDB142;
+        border: 2px solid black;
+        width: 100%;
+        height: 100%;
+        color: black;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 5px;
+    }
+
+        #buttonResetEnch:hover {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #FDB142;
+            border: 3px solid rgb(253, 255, 149);
+            width: 100%;
+            box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+            color: rgb(253, 255, 149);
+            border-radius: 5px;
+            text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+        }
+
+        #buttonResetEnch:active {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #e4a039;
+            border: 0px;
+            width: 100%;
+            box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+            text-shadow: 2px 2px 0px black;
+            color: transparent;
+            transform: translate(3px, 3px);
+        }
+    #buttonResetAtt {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        font-size: 2em;
+        background-color: #FDB142;
+        border: 2px solid black;
+        width: 100%;
+        height: 100%;
+        color: black;
+        box-shadow: 5px 5px 5px black;
+        border-radius: 5px;
+    }
+
+        #buttonResetAtt:hover {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #FDB142;
+            border: 2px solid rgb(253, 255, 149);
+            width: 100%;
+            box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+            color: rgb(253, 255, 149);
+            border-radius: 5px;
+            text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+        }
+
+        #buttonResetAtt:active {
+            font-family: "Fredoka", sans-serif;
+            font-weight: 500;
+            background-color: #e4a039;
+            border: 0px;
+            width: 100%;
+            box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+            text-shadow: 2px 2px 0px black;
+            color: transparent;
+            transform: translate(3px, 3px);
+       }
+
+.buttonCommitInd    {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    background-color: #FDB142;
+    border: 2px solid black;
+    color: black;
+    box-shadow: 3px 3px 0px 0px black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+    .buttonCommitInd:hover {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        background-color: #FDB142;
+        border: 2px solid rgb(253, 255, 149);
+        width: 100%;
+        box-shadow: inset 0px 0px 3px black, 3px 3px 5px black, 0px 0px 8px rgba(255, 255, 255, 0.589);
+        color: rgb(253, 255, 149);
+        border-radius: 5px;
+        text-shadow: 0px 0px 3px rgb(253, 255, 149), 0px 0px 0px rgba(255, 255, 255, 0.589);
+    }
+
+    .buttonCommitInd:active {
+        font-family: "Fredoka", sans-serif;
+        font-weight: 500;
+        background-color: #e4a039;
+        border: 1px solid black;
+        width: 100%;
+        box-shadow: inset 2px 2px 5px black, inset 0px 0px 15px rgb(253, 255, 149);
+        text-shadow: 2px 2px 0px black;
+        color: transparent;
+        transform: translate(3px, 3px);
+    }   
+
+#weapons {
+    height: 0%;
+}
+
+#weaponboxcontain div {
+    width: 90%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.linkinputoutput {
+    padding: 5px;
+    margin: 0px;
+    margin-right: -3px;
+    margin-left: auto;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 70%;
+    height: 50%;
+    font-family: "Fredoka", sans-serif;
+    justify-content:left;
+}
+
+.custom-select {
+    position: relative;
+    font-family: "Fredoka", sans-serif;
+    font-size: 0.8em;
+    text-align: left;
+    background:#FDB142;
+    border:1px solid #444;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: auto;
+    width: 100%;
+}
+
+select.custom-dropdown {
+    display:none;
+}
+
+.custom-select-selected {
+    background:#1e1e1e;
+    color:black;
+    padding:10px;
+    margin: 0.1em;
+    border:1px solid #444;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f0f0f0;
+    z-index: 5;
+    width: auto;
+}
+
+.custom-arrow {
+    font-size: 2em;
+    font-weight: 100;
+    margin: -10px;
+    margin-right: 0px;
+    transition:transform .15s ease, transform .15s ease;
+    color:#000000;
+}
+
+
+.custom-select:hover .custom-arrow {
+    transform: translate(0px, 2px);
+    z-index:1001;
+}
+
+.custom-select.open:not(.drop-up) .custom-arrow {
+    transform:translate(0px, 10px) scale(120%);
+    z-index:1001;
+}
+
+.custom-select.open.drop-up .custom-arrow {
+    transform: rotate(-180deg) translate(0px, 10px);
+    
+    z-index:1001;
+}
+
+.fa-caret-down {
+    font-size: 12px;
+    margin: -1px;
+    padding: 0px;
+}
+.fa-caret-up {
+    font-size: 12px;
+    margin: -1px;
+    padding: 0px;
+}
+
+.fa-arrow-left {
+    font-size: 10px;
+    margin: -1px;
+    padding: 0px;
+    margin-left: 5px;
+    color: #89a0b8"
+}
+
+.fa-x {
+    font-size: 7px;
+    margin: -2px;
+    padding: 0px;
+    color: #89a0b8"
+}
+
+.oils1selector {
+  position: relative;
+  display: inline-block;
+}
+
+.oils1selector-content {
+  display: none; /* Hide the dropdown content by default */
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.oils1selector-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {
+  display: block;
+}
+
+.mobiledrop {
+    display: flex;
+    font-size: 1em;
+    height: 30px;
+    box-shadow: 0px 0px 0px 10px #FDB142, 0px 0px 0px 12px black;
+    border: 2px solid black;
+    width: 95%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 0.01em;
+}
+
+.custom-select-panel {
+    display:none;
+    position:absolute;
+    background:#1b1b1b;
+    border:1px solid #444;
+    z-index:1000;
+    width: 100%;
+    left: 100px;
+}
+
+.custom-select.open .custom-select-panel {
+    display:block;
+    background:#1b1b1b;
+}
+
+.custom-select.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.custom-select.disabled * {
+    pointer-events: none;
+}
+
+.custom-select.disabled .selected {
+    background: #eee;
+}
+
+.custom-select-search {
+    width:95%;
+    padding:8px;
+    margin-bottom: 10px;
+    background:#f0f0f0;
+    color:black;
+    border:none;
+    outline:none;
+}
+
+.custom-select-menu {
+    list-style:none;
+    margin:0;
+    padding:0;
+    max-height:380px;
+    overflow-y:auto;
+    text-align: left;
+}
+
+.custom-option {
+    padding:8px 10px;
+    cursor:pointer;
+    color:#ddd;
+    margin-right: 5px;
+    transition: opacity .15s ease, height .15s ease;
+}
+
+.custom-option.active,
+.custom-option:hover {
+    background:#333;
+}
+
+.custom-group {
+    padding: 6px 10px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    margin-right: 5px;
+    font-size:12px;
+    color:#888;
+    background:#111;
+    text-transform:uppercase;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.oilimages {
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}
+
+#weaponimage {
+    animation: breatheGun;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease;
+    transform: scale(1);
+    transition: transform 5s ease-in-out;
+}
+
+#otherboxthing:hover #weaponimage{
+    transform: translate(0px, -5px) scale(130%);
+    
+}
+
+#otherboxthing:hover {
+    transform: translate(0px, -5px) scale(140%);
+    animation-fill-mode: forwards;
+}
+#otherboxthing {
+     transform: scale(1);
+     transition: transform 2s ease-in-out;
+     animation: shake-small 5s ease-in-out infinite;
+}
+
+#boxglowthing {
+    animation: insideShadow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
+    transition: all 2s ease-in-out;
+    }
+
+#boxglowthing:hover
+{
+    background-color: #111111;
+    transition: all 2s ease-in-out;
+    animation-fill-mode: both;
+}
+ 
+#boxglowthing:hover #otherboxthing
+{
+    transform: translate(0px, -5px) scale(140%);
+    
+}
+
+#boxglowthing:active
+{
+    animation: spin 0.1s infinite linear;
+    -moz-animation: spin 0.1s infinite linear;
+    -webkit-animation: spin 0.1s infinite linear;
+}
+
+/*.shake-little {
+    transform: scale(1);
+     transition: transform 2s ease-in-out;
+}
+
+.shake-little:hover {
+    transform: translate(0px, -5px) scale(150%);
+    animation-fill-mode: forwards;
+}
+
+#weaponimage2 {
+    animation: gunShadow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-play-state: running;
+    
+}*/
+
+mark {
+    background:#555;
+    color:white;
+}
+
+.custom-select:hover .custom-select-selected {
+    background: #ffffff;
+    border-color: #000000;
+    -webkit-text-fill-color: #fdd142;
+    text-shadow: 20px 0px 15px #000000, 1px 1px 0 #000000, 1px -1px 0 #000000, 1px 1px 0 #000000, 1px 1px 0 #000000, 1px 0px 0 #000000, 0px 1px 0 #000000, -1px 0px 0 #000000, 0px -1px 0 #000000; 
+    box-shadow: inset 2px 2px 2px #bbbbbb;
+    font-weight: 600;
+}
+
+.no-arrows .custom-group::after {
+    display: none;
+}
+
+.custom-select-selected {
+    transition: background 0.15s ease,
+                border-color 0.15s ease,
+                box-shadow 0.15s ease,
+                text-shadow 0.15s ease,
+                font-weight 0.15s ease,
+                color 0.15s ease;
+}
+
+.custom-select.drop-up .custom-select-panel {
+    top: auto;
+    bottom: 100%;
+}
+
+.custom-group::after {
+    content: "▾";
+    position: absolute;
+    right: 8px;
+    font-size: 1.5em;
+    transition: transform .15s ease;
+}
+
+.custom-group[data-collapsed="true"]::after {
+    transform: rotate(360deg) scaleY(10%);
+}
+
+#oils1selector {
+     anchor-name: --anchoroil1;
+}
+
+#width-grid {
+     grid-column: 1 / -1;
+}
+
+.railgun {
+    animation: railgun 0.1s infinite running;
+    -moz-animation: railgun 0.1s infinite running;
+    -webkit-animation: railgun 0.1s infinite running;
+    text-align: center;
+}
+
+.scrollcard {
+    transition: transform 2s ease;
+    transform: translateY(-250px);
+    border-top: 0px;
+}
+
+.scrollcardanimate {
+    transform: translateY(0px);
+    transition: transform 2s ease;
+}
+
+.scrollcardfade {
+    opacity: 0%;
+    transition: transform 2s ease;
+}
+
+@keyframes slide {
+    0% {transform: translateY(-50px);}
+    100% {transform: translateY(0px);}
+}
+
+}
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(-360deg); filter: blur(10.1px); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(-360deg); filter: blur(10.1px);} 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(-360deg); 
+        transform:rotate(-360deg); 
+        filter: blur(10.1px);
+    } 
+}
+
+@-moz-keyframes railgun { 
+    0% { -moz-transform: skew(-0.2rad); filter: blur(0px); }
+    100% { -moz-transform: skew(-0.312rad); filter: blur(1.1px); color: yellow;} 
+}
+@-webkit-keyframes railgun { 
+    0% { -webkit-transform: skew(-0.2rad); filter: blur(0px);} 
+    100% { -webkit-transform: skew(-0.312rad); filter: blur(1.1px); color: yellow;} 
+}
+@keyframes railgun { 
+    0% { 
+        -webkit-transform: skew(-0.2rad); 
+        transform: skew(-0.2rad);
+        filter: blur(0px);
+        
+    } 
+    100% { 
+        -webkit-transform: skew(-0.312rad); 
+        transform: skew(-0.312rad);
+        filter: blur(1.1px);
+        color: yellow;
+        text-shadow: -50px 0px 30px yellow;
+    } 
+}
+
+@keyframes invalidlink {
+    0% {text-shadow: 0px 0px 20px rgb(255, 100, 100);opacity: 100%;}
+    25% {text-shadow: 0px 0px 20px rgb(255, 86, 86); opacity: 0%;}
+    50% {text-shadow: 0px 0px 50px rgb(255, 88, 88);opacity: 100%;}
+    75% {text-shadow: 0px 0px 20px rgb(255, 116, 116); opacity: 0%;}
+    100% {text-shadow: 0px 0px 20px rgb(255, 94, 94);opacity: 100%;}
+}
+
+@keyframes goodlink {
+    0% {text-shadow: 0px 0px 20px rgb(100, 255, 110);opacity: 100%;}
+    25% {text-shadow: 0px 0px 20px rgb(100, 255, 110); opacity: 0%;}
+    50% {text-shadow: 0px 0px 50px rgb(100, 255, 110);opacity: 100%;}
+    75% {text-shadow: 0px 0px 20px rgb(100, 255, 110); opacity: 0%;}
+    100% {text-shadow: 0px 0px 20px rgb(100, 255, 110);opacity: 100%;}
+}
+
+@keyframes zlayer {
+    from {z-index: 1;}
+    to {z-index: 99;}
+}
